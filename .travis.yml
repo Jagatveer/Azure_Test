@@ -1,0 +1,16 @@
+sudo: false
+env:
+  global:
+  - CI_HOME=`pwd`/../../
+language: ruby
+rvm:
+- 2.0.0
+install: echo "party time"
+script: echo "Ready??"
+deploy:
+ provider: azure_web_apps
+ skip_cleanup: true
+ site: "jagattest"
+ verbose: true
+ on:
+   master
